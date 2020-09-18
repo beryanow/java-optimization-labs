@@ -1,3 +1,3 @@
-# Java Optimization Course NSU Labs
+# NSU Java Optimization Course Labs
 
 1) Byte Code Constant Pool Hand Revealing. 
