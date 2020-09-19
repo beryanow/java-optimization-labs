@@ -1,3 +1,8 @@
-# Java Optimization Course Labs (NSU)
+# Курс оптимизации Java программ (НГУ)
+####Лабораторная работа №1.
+######Разбор пула констант в байт коде.
 
-1) Byte Code Constant Pool Hand Revealing. 
+# Java Optimization Course Labs (NSU)
+####Task #1
+######Byte code constant pool hand revealing.
+
