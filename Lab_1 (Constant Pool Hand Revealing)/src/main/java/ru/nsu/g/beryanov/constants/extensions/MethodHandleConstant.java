@@ -1,9 +1,10 @@
-package ru.nsu.g.beryanov.constant.extension;
+package ru.nsu.g.beryanov.constants.extensions;
 
 import lombok.Getter;
 import lombok.ToString;
 
-import ru.nsu.g.beryanov.constant.Constant;
+import ru.nsu.g.beryanov.constants.Constant;
+import ru.nsu.g.beryanov.constants.MethodHandleKind;
 import ru.nsu.g.beryanov.utility.DataReader;
 
 import java.io.FileInputStream;
@@ -22,6 +23,6 @@ public class MethodHandleConstant extends Constant {
 
     @Override
     public String getData() {
-        return new StringBuilder().append(String.valueOf(referenceKind)).append(" #").append(String.valueOf(referenceIndex)).toString();
+        return new StringBuilder().append(MethodHandleKind.methodHandleKinds.get(referenceKind)).append(" #").append(String.valueOf(referenceIndex)).toString();
     }
 }

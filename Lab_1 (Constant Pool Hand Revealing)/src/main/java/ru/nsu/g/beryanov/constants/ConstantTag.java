@@ -1,4 +1,4 @@
-package ru.nsu.g.beryanov.constant;
+package ru.nsu.g.beryanov.constants;
 
 import lombok.experimental.UtilityClass;
 
@@ -21,4 +21,6 @@ public class ConstantTag {
     public final byte INVOKE_DYNAMIC = 0x12;
     public final byte MODULE = 0x13;
     public final byte PACKAGE = 0x14;
+
+
 }

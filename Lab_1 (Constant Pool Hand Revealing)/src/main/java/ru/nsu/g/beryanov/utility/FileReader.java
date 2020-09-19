@@ -1,6 +1,5 @@
 package ru.nsu.g.beryanov.utility;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 

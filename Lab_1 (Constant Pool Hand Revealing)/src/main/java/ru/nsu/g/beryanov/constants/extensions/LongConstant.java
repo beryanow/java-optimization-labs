@@ -1,20 +1,20 @@
-package ru.nsu.g.beryanov.constant.extension;
+package ru.nsu.g.beryanov.constants.extensions;
 
 import lombok.Getter;
 import lombok.ToString;
 
-import ru.nsu.g.beryanov.constant.Constant;
+import ru.nsu.g.beryanov.constants.Constant;
 import ru.nsu.g.beryanov.utility.DataReader;
 
 import java.io.FileInputStream;
 
 @ToString
 @Getter
-public class DoubleConstant extends Constant {
+public class LongConstant extends Constant {
     private int highBytes;
     private int lowBytes;
 
-    private double bytes;
+    private long bytes;
 
     @Override
     public void readData(FileInputStream fileInputStream, DataReader dataReader) {

@@ -1,29 +1,30 @@
-package ru.nsu.g.beryanov.utility;
+package ru.nsu.g.beryanov.service;
 
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ru.nsu.g.beryanov.constant.Constant;
-import ru.nsu.g.beryanov.constant.ConstantTag;
-import ru.nsu.g.beryanov.constant.extension.ClassConstant;
-import ru.nsu.g.beryanov.constant.extension.DoubleConstant;
-import ru.nsu.g.beryanov.constant.extension.DynamicConstant;
-import ru.nsu.g.beryanov.constant.extension.FieldReferenceConstant;
-import ru.nsu.g.beryanov.constant.extension.FloatConstant;
-import ru.nsu.g.beryanov.constant.extension.IntegerConstant;
-import ru.nsu.g.beryanov.constant.extension.InterfaceMethodReferenceConstant;
-import ru.nsu.g.beryanov.constant.extension.InvokeDynamicConstant;
-import ru.nsu.g.beryanov.constant.extension.LongConstant;
-import ru.nsu.g.beryanov.constant.extension.MethodHandleConstant;
-import ru.nsu.g.beryanov.constant.extension.MethodReferenceConstant;
-import ru.nsu.g.beryanov.constant.extension.MethodTypeConstant;
-import ru.nsu.g.beryanov.constant.extension.ModuleConstant;
-import ru.nsu.g.beryanov.constant.extension.NameAndTypeConstant;
-import ru.nsu.g.beryanov.constant.extension.PackageConstant;
-import ru.nsu.g.beryanov.constant.extension.StringConstant;
-import ru.nsu.g.beryanov.constant.extension.UTF8Constant;
+import ru.nsu.g.beryanov.constants.Constant;
+import ru.nsu.g.beryanov.constants.ConstantTag;
+import ru.nsu.g.beryanov.constants.extensions.ClassConstant;
+import ru.nsu.g.beryanov.constants.extensions.DoubleConstant;
+import ru.nsu.g.beryanov.constants.extensions.DynamicConstant;
+import ru.nsu.g.beryanov.constants.extensions.FieldReferenceConstant;
+import ru.nsu.g.beryanov.constants.extensions.FloatConstant;
+import ru.nsu.g.beryanov.constants.extensions.IntegerConstant;
+import ru.nsu.g.beryanov.constants.extensions.InterfaceMethodReferenceConstant;
+import ru.nsu.g.beryanov.constants.extensions.InvokeDynamicConstant;
+import ru.nsu.g.beryanov.constants.extensions.LongConstant;
+import ru.nsu.g.beryanov.constants.extensions.MethodHandleConstant;
+import ru.nsu.g.beryanov.constants.extensions.MethodReferenceConstant;
+import ru.nsu.g.beryanov.constants.extensions.MethodTypeConstant;
+import ru.nsu.g.beryanov.constants.extensions.ModuleConstant;
+import ru.nsu.g.beryanov.constants.extensions.NameAndTypeConstant;
+import ru.nsu.g.beryanov.constants.extensions.PackageConstant;
+import ru.nsu.g.beryanov.constants.extensions.StringConstant;
+import ru.nsu.g.beryanov.constants.extensions.UTF8Constant;
+import ru.nsu.g.beryanov.utility.DataReader;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -163,8 +164,8 @@ public class ConstantPoolAnalyzer {
         return constantArrayList;
     }
 
-    public void showResult(short majorVersion, short constantPoolCount, ArrayList<Constant> constantArrayList) {
-        log.info(new StringBuilder().append("Class file format version: ").append(majorVersion).toString());
+    public void showResult(short majorVersion, short minorVersion, short constantPoolCount, ArrayList<Constant> constantArrayList) {
+        log.info(new StringBuilder().append("Class file format version: ").append(majorVersion).append(".").append(minorVersion).toString());
 
         for (int i = 0; i < constantPoolCount; i++) {
             log.info(new StringBuilder().append("#").append(i + 1).append(" ").append(constantArrayList.get(i).getClass().getSimpleName().split("Constant")[0]).append(" : ").append(constantArrayList.get(i).getData()).toString());

@@ -5,8 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import ru.nsu.g.beryanov.constant.Constant;
-import ru.nsu.g.beryanov.utility.ConstantPoolAnalyzer;
+import ru.nsu.g.beryanov.constants.Constant;
+import ru.nsu.g.beryanov.service.ConstantPoolAnalyzer;
 import ru.nsu.g.beryanov.utility.FileReader;
 
 import java.util.ArrayList;
@@ -30,11 +30,13 @@ public class ConstantPoolAnalyzerApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         constantPoolAnalyzer.missMagicNumber(fileReader.getFileInputStream());
 
-        short majorVersion = constantPoolAnalyzer.getVersions(fileReader.getFileInputStream())[1];
-        short constantPoolCount = constantPoolAnalyzer.getConstantPoolCount(fileReader.getFileInputStream());
+        short[] versions = constantPoolAnalyzer.getVersions(fileReader.getFileInputStream());
+        short minorVersion = versions[0];
+        short majorVersion = versions[1];
 
+        short constantPoolCount = constantPoolAnalyzer.getConstantPoolCount(fileReader.getFileInputStream());
         ArrayList<Constant> constantArrayList = constantPoolAnalyzer.getConstantPool(fileReader.getFileInputStream(), constantPoolCount);
 
-        constantPoolAnalyzer.showResult(majorVersion, (short) (constantPoolCount - 1), constantArrayList);
+        constantPoolAnalyzer.showResult(majorVersion, minorVersion, (short) (constantPoolCount - 1), constantArrayList);
     }
 }

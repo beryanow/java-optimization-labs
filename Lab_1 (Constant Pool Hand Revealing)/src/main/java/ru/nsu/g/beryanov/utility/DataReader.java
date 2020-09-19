@@ -38,26 +38,11 @@ public class DataReader {
         fileInputStream.read(bytes);
 
         int value = 0;
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 4; i++) {
             value <<= 8;
             value |= bytes[i] & 0xFF;
         }
 
-        return value;
-    }
-
-    @SneakyThrows
-    public long readEightBytes(FileInputStream fileInputStream) {
-        byte[] bytes = new byte[8];
-
-        fileInputStream.read(bytes);
-
-        long value = 0;
-        for (int i = 0; i < 8; i++) {
-            value <<= 8;
-            value |= bytes[i] & 0xFF;
-        }
-
-        return value;
+        return value ;
     }
 }

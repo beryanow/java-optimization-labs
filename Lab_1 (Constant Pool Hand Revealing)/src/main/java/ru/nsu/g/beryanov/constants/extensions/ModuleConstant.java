@@ -1,11 +1,11 @@
-package ru.nsu.g.beryanov.constant.extension;
+package ru.nsu.g.beryanov.constants.extensions;
 
-import ru.nsu.g.beryanov.constant.Constant;
+import ru.nsu.g.beryanov.constants.Constant;
 import ru.nsu.g.beryanov.utility.DataReader;
 
 import java.io.FileInputStream;
 
-public class PackageConstant extends Constant {
+public class ModuleConstant extends Constant {
     private short nameIndex;
 
     @Override
@@ -18,4 +18,3 @@ public class PackageConstant extends Constant {
         return new StringBuilder().append("#").append(nameIndex).toString();
     }
 }
-
