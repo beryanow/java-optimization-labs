@@ -16,7 +16,7 @@ public class ConstantPoolAnalyzerConfiguration {
     public FileReader fileReader() {
         FileReader fileReader = new FileReader();
 
-        File file = new File("src/main/resources/DataReader.class");
+        File file = new File("src/main/resources/App.class");
         FileInputStream fileInputStream = new FileInputStream(file);
 
         fileReader.setFile(file);

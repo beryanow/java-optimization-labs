@@ -11,15 +11,15 @@ import java.io.FileInputStream;
 @ToString
 @Getter
 public class IntegerConstant extends Constant {
-    private int value;
+    private int bytes;
 
     @Override
     public void readData(FileInputStream fileInputStream, DataReader dataReader) {
-        value = dataReader.readFourBytes(fileInputStream);
+        bytes = dataReader.readFourBytes(fileInputStream);
     }
 
     @Override
     public String getData() {
-        return String.valueOf(value);
+        return String.valueOf(bytes);
     }
 }

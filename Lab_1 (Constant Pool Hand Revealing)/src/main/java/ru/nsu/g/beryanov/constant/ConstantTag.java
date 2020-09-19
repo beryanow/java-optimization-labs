@@ -17,5 +17,8 @@ public class ConstantTag {
     public final byte NAME_AND_TYPE = 0xC;
     public final byte METHOD_HANDLE = 0xF;
     public final byte METHOD_TYPE = 0x10;
+    public final byte DYNAMIC = 0x11;
     public final byte INVOKE_DYNAMIC = 0x12;
+    public final byte MODULE = 0x13;
+    public final byte PACKAGE = 0x14;
 }

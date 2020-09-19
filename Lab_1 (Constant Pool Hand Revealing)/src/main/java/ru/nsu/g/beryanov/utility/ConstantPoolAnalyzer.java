@@ -9,6 +9,7 @@ import ru.nsu.g.beryanov.constant.Constant;
 import ru.nsu.g.beryanov.constant.ConstantTag;
 import ru.nsu.g.beryanov.constant.extension.ClassConstant;
 import ru.nsu.g.beryanov.constant.extension.DoubleConstant;
+import ru.nsu.g.beryanov.constant.extension.DynamicConstant;
 import ru.nsu.g.beryanov.constant.extension.FieldReferenceConstant;
 import ru.nsu.g.beryanov.constant.extension.FloatConstant;
 import ru.nsu.g.beryanov.constant.extension.IntegerConstant;
@@ -18,7 +19,9 @@ import ru.nsu.g.beryanov.constant.extension.LongConstant;
 import ru.nsu.g.beryanov.constant.extension.MethodHandleConstant;
 import ru.nsu.g.beryanov.constant.extension.MethodReferenceConstant;
 import ru.nsu.g.beryanov.constant.extension.MethodTypeConstant;
+import ru.nsu.g.beryanov.constant.extension.ModuleConstant;
 import ru.nsu.g.beryanov.constant.extension.NameAndTypeConstant;
+import ru.nsu.g.beryanov.constant.extension.PackageConstant;
 import ru.nsu.g.beryanov.constant.extension.StringConstant;
 import ru.nsu.g.beryanov.constant.extension.UTF8Constant;
 
@@ -57,90 +60,91 @@ public class ConstantPoolAnalyzer {
         Constant constant = null;
 
         switch (tag) {
-            case ConstantTag.UTF8:
+            case ConstantTag.UTF8 -> {
                 constant = new UTF8Constant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.INTEGER:
+            }
+            case ConstantTag.INTEGER -> {
                 constant = new IntegerConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.FLOAT:
+            }
+            case ConstantTag.FLOAT -> {
                 constant = new FloatConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.LONG:
+            }
+            case ConstantTag.LONG -> {
                 constant = new LongConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.DOUBLE:
+            }
+            case ConstantTag.DOUBLE -> {
                 constant = new DoubleConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.CLASS:
+            }
+            case ConstantTag.CLASS -> {
                 constant = new ClassConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.STRING:
+            }
+            case ConstantTag.STRING -> {
                 constant = new StringConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.FIELD_REFERENCE:
+            }
+            case ConstantTag.FIELD_REFERENCE -> {
                 constant = new FieldReferenceConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.METHOD_REFERENCE:
+            }
+            case ConstantTag.METHOD_REFERENCE -> {
                 constant = new MethodReferenceConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.INTERFACE_METHOD_REFERENCE:
+            }
+            case ConstantTag.INTERFACE_METHOD_REFERENCE -> {
                 constant = new InterfaceMethodReferenceConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.NAME_AND_TYPE:
+            }
+            case ConstantTag.NAME_AND_TYPE -> {
                 constant = new NameAndTypeConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.METHOD_HANDLE:
+            }
+            case ConstantTag.METHOD_HANDLE -> {
                 constant = new MethodHandleConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.METHOD_TYPE:
+            }
+            case ConstantTag.METHOD_TYPE -> {
                 constant = new MethodTypeConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
-            case ConstantTag.INVOKE_DYNAMIC:
+            }
+            case ConstantTag.DYNAMIC -> {
+                constant = new DynamicConstant();
+                constant.setTag(tag);
+                constant.readData(fileInputStream, dataReader);
+            }
+            case ConstantTag.INVOKE_DYNAMIC -> {
                 constant = new InvokeDynamicConstant();
                 constant.setTag(tag);
-
                 constant.readData(fileInputStream, dataReader);
-                break;
+            }
+            case ConstantTag.MODULE -> {
+                constant = new ModuleConstant();
+                constant.setTag(tag);
+                constant.readData(fileInputStream, dataReader);
+            }
+            case ConstantTag.PACKAGE -> {
+                constant = new PackageConstant();
+                constant.setTag(tag);
+                constant.readData(fileInputStream, dataReader);
+            }
         }
 
         return constant;

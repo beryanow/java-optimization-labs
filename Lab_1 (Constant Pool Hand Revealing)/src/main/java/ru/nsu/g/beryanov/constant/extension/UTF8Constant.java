@@ -14,7 +14,9 @@ import java.nio.charset.StandardCharsets;
 @Getter
 public class UTF8Constant extends Constant {
     private short length;
-    private String value;
+    private byte[] bytes;
+
+    private String bytesValue;
 
     @SneakyThrows
     @Override
@@ -24,11 +26,11 @@ public class UTF8Constant extends Constant {
         byte[] bytes = new byte[length];
         fileInputStream.read(bytes);
 
-        value = new String(bytes, StandardCharsets.UTF_8);
+        bytesValue = new String(bytes, StandardCharsets.UTF_8);
     }
 
     @Override
     public String getData() {
-        return value;
+        return bytesValue;
     }
 }

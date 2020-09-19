@@ -11,15 +11,21 @@ import java.io.FileInputStream;
 @ToString
 @Getter
 public class LongConstant extends Constant {
-    private long value;
+    private int highBytes;
+    private int lowBytes;
+
+    private long bytes;
 
     @Override
     public void readData(FileInputStream fileInputStream, DataReader dataReader) {
-        value = dataReader.readEightBytes(fileInputStream);
+        highBytes = dataReader.readFourBytes(fileInputStream);
+        lowBytes = dataReader.readFourBytes(fileInputStream);
+
+        bytes = ((long) highBytes << 32) + lowBytes;
     }
 
     @Override
     public String getData() {
-        return String.valueOf(value);
+        return String.valueOf(bytes);
     }
 }

@@ -11,16 +11,16 @@ import java.io.FileInputStream;
 @ToString
 @Getter
 public class ClassConstant extends Constant {
-    private short value;
+    private short nameIndex;
 
     @Override
     public void readData(FileInputStream fileInputStream, DataReader dataReader) {
-        value = dataReader.readTwoBytes(fileInputStream);
+        nameIndex = dataReader.readTwoBytes(fileInputStream);
     }
 
     @Override
     public String getData() {
-        return new StringBuilder().append("#").append(String.valueOf(value)).toString();
+        return new StringBuilder().append("#").append(String.valueOf(nameIndex)).toString();
     }
 }
 
