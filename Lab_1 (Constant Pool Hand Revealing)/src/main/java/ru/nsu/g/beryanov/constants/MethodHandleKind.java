@@ -1,11 +1,7 @@
 package ru.nsu.g.beryanov.constants;
 
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Iterables;
 import lombok.experimental.UtilityClass;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @UtilityClass
 public class MethodHandleKind {
