@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>14</java.version>
+        <guava.version>23.0</guava.version>
     </properties>
 
     <dependencies>
@@ -30,6 +31,11 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
 
