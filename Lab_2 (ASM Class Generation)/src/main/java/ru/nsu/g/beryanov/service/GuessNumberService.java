@@ -1,5 +1,6 @@
 package ru.nsu.g.beryanov.service;
 
+import lombok.SneakyThrows;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
@@ -153,7 +154,8 @@ public class GuessNumberService {
         return this;
     }
 
-    public void createClassFile(ClassWriter classWriter) throws IOException {
+    @SneakyThrows
+    public void createClassFile(ClassWriter classWriter) {
         FileOutputStream outputStream = new FileOutputStream("src/main/resources/ru/nsu/g/beryanov/GuessNumber.class");
         byte[] strToBytes = classWriter.toByteArray();
         outputStream.write(strToBytes);
