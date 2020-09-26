@@ -1,6 +1,7 @@
 package ru.nsu.g.beryanov.constants;
 
 import com.google.common.collect.ImmutableMap;
+
 import lombok.experimental.UtilityClass;
 
 @UtilityClass
