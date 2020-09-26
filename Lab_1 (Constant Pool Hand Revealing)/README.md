@@ -1,9 +1,9 @@
-# Лабораторная работа №1.
-### Разбор пула констант в байт коде.
+# Лабораторная работа №1
+### Разбор пула констант в байт коде
 
-###### Spring Boot приложение, декомпозирующее .class файлы (байт код) и извлекающее из них подробную информацию о пуле констант. 
+###### Spring Boot приложение, декомпозирующее .class файлы (байт код) и извлекающее из них подробную информацию о пуле констант
 
-### Реализованные константы:
+### Реализованные константы
 * UTF8 = 0x1;
 * INTEGER = 0x3;
 * FLOAT = 0x4;
@@ -28,12 +28,12 @@
 ### Пример декомпозиции (версия байт кода - 58.0
 ![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_1%20(Constant%20Pool%20Hand%20Revealing)/screenshots/Constant%20Class%20Analysis.png?raw=true "версия 58.0")
 
-# Task #1.
-### Byte code constant pool hand revealing.
+# Task #1
+### Byte code constant pool hand revealing
 
-###### Spring Boot application which disassembles .class files (byte code) and retrieves detailed constant pool information. 
+###### Spring Boot application which disassembles .class files (byte code) and retrieves detailed constant pool information 
 
-### Implemented constants:
+### Implemented constants
 * UTF8 = 0x1;
 * INTEGER = 0x3;
 * FLOAT = 0x4;
