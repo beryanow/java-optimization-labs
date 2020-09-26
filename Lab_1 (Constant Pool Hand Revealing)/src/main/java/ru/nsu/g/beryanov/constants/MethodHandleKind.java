@@ -28,5 +28,4 @@ public class MethodHandleKind {
                     .put(REFERENCE_NEW_INVOKE_SPECIAL, "REFERENCE_NEW_INVOKE_SPECIAL")
                     .put(REFERENCE_INVOKE_INTERFACE, "REFERENCE_INVOKE_INTERFACE")
                     .build();
-
 }
