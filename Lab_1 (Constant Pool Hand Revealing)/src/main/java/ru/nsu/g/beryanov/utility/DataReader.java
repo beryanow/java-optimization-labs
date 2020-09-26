@@ -1,6 +1,7 @@
 package ru.nsu.g.beryanov.utility;
 
 import lombok.SneakyThrows;
+
 import org.springframework.stereotype.Component;
 
 import java.io.FileInputStream;
