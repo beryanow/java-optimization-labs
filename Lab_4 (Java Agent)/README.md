@@ -13,4 +13,4 @@
 ###### Multi modular Maven application, one part of which is Java agent that somehow changes TransactionProcessor class
 
 ### Agent work result
-![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_3%20(Custom%20Class%20Loader)/screenshots/Method%20Output.png?raw=true)
+![]()
