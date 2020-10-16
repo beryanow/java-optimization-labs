@@ -3,7 +3,7 @@
 
 ###### Многомодульное Maven приложение, одним из модулей которого является Java агент, определенным образом изменяющий класс TransactionProcessor 
 
-### Результат работы агента
+### Результат работы агента (частичный)
 ![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_4%20(Java%20Agent)/screenshots/Снимок%20экрана%202020-10-16%20в%2016.00.51.png?raw=true)
 
 ### Результат без влияния агента
@@ -14,7 +14,7 @@
 
 ###### Multi modular Maven application, one part of which is Java agent that somehow changes TransactionProcessor class
 
-### Agent work result
+### Agent work result (partial)
 ![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_4%20(Java%20Agent)/screenshots/Снимок%20экрана%202020-10-16%20в%2016.00.51.png?raw=true)
 
 ### Non agent result effect
