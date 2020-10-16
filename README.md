@@ -8,6 +8,10 @@
 #### Лабораторная работа №3
 ###### Кастомный загрузчик классов
 
+#### Лабораторная работа №4
+###### Java агент
+
+
 # Java Program Optimization Course Labs (NSU)
 #### Task #1
 ###### Byte code constant pool hand revealing
@@ -17,3 +21,6 @@
 
 #### Task #3
 ###### Custom class loader
+
+#### Task #4
+###### Java agent
