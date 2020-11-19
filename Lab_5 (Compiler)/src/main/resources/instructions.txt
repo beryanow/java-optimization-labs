@@ -1,0 +1,52 @@
+new -> string_variable = "some_expression";
+print -> string_variable;
+
+new -> number_variable = 123;
+print -> number_variable;
+
+new -> sum = 5 + 5;
+print -> sum;
+print -> sum * 55;
+print -> sum / 55;
+print -> sum - 55;
+
+if (1 == 1) {
+    print -> "true";
+}
+
+if (1 != 2) {
+    print -> "false";
+}
+
+if (5 < 6) {
+    print -> "5 < 6";
+}
+
+if (7 >= 7) {
+    print -> "7 >= 7";
+}
+
+if (7 <= 7) {
+    print -> "7 <= 7";
+}
+
+if (6 > 5) {
+    print -> "6 > 5";
+}
+
+while (8 > 3) {
+    print -> "while";
+}
+
+for (new -> i = 0 ; i < 5 ; i = i + 1) {
+    print -> "for";
+}
+
+
+
+
+
+
+
+
+

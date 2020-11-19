@@ -11,6 +11,9 @@
 #### Лабораторная работа №4
 ###### Java агент
 
+#### Лабораторная работа №5
+###### Компилятор
+
 
 # Java Program Optimization Course Labs (NSU)
 #### Task #1
@@ -24,3 +27,6 @@
 
 #### Task #4
 ###### Java agent
+
+#### Task #5
+###### Compiler
