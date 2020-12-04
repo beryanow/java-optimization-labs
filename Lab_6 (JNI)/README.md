@@ -17,6 +17,8 @@
 11. Выполняем команду: java -Djava.library.path=../../ ru/nsu/g/beryanov/JNIApplication.
 12. Получаем информацию: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz 2C 4T.
 
+### Полученный результат
+![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_6%20(JNI)/screenshots/cpuinfo.png?raw=true)
 # Task #5
 ### JNI-bridge
 
@@ -36,4 +38,7 @@
 10. Go to src/main/java.
 11. Proceed with command: java -Djava.library.path=../../ ru/nsu/g/beryanov/JNIApplication.
 12. Get info: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz 2C 4T.
+
+### Result
+![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_6%20(JNI)/screenshots/cpuinfo.png?raw=true)
 
