@@ -20,7 +20,7 @@
 12. Получаем информацию: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz 2C 4T.
 
 ### Полученный результат
-![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_6%20(JNI)/screenshots/cpuinfo.png?raw=true)
+![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_6%20(Foreign%20Language%20Code%20Integration)/screenshots/cpuinfo_jni.png?raw=true)
 
 ### Интеграция нативного LLVM кода с JVM
 
@@ -32,6 +32,9 @@
 3. Скачиваем SDK GraalVM, настраиваем в IntelliJIdea, либо прописываем пути в ~/.bash_profile (если действуем только через терминал).
 4. Запускаем Java приложение с помощью GraalVM любым способом (IntelliJIdea -> Run / java LLVMJVMApplication.java -> javac LLVMJVMApplication).
 5. Получаем информацию: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz 2C 4T.
+
+### Полученный результат
+![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_6%20(Foreign%20Language%20Code%20Integration)/screenshots/cpuinfo_llvm.png?raw=true)
 
 # Task #5
 ## Foreign language code integration into Java
@@ -56,7 +59,7 @@
 12. Get info: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz 2C 4T.
 
 ### Result
-![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_6%20(JNI)/screenshots/cpuinfo.png?raw=true)
+![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_6%20(Foreign%20Language%20Code%20Integration)/screenshots/cpuinfo_jni.png?raw=true)
 
 ### Native LLVM code JVM integration
 
@@ -68,3 +71,6 @@
 3. Download GraalVM SDK, set in IntelliJIdea, otherwise edit paths in ~/.bash_profile (in case of using terminal only).
 4. Run Java application using GraalVM in any way (IntelliJIdea -> Run or with commands: java LLVMJVMApplication.java -> javac LLVMJVMApplication).
 5. Get info: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz 2C 4T.
+
+### Result
+![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_6%20(Foreign%20Language%20Code%20Integration)/screenshots/cpuinfo_llvm.png?raw=true)
