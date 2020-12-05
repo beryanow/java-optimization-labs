@@ -34,5 +34,5 @@
 #### Task #5
 ###### Compiler
 
-#### Task #5
-###### Compiler
+#### Task #6
+###### Foreign language code integration into Java
