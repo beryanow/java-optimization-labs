@@ -17,6 +17,9 @@
 #### Лабораторная работа №6
 ###### Интеграция кода другого языка программирования в Java
 
+#### Лабораторная работа №7
+###### Сравнение скорости методов определения, является ли строка числом (проверка исключение / посимвольно)
+
 
 # Java Program Optimization Course Labs (NSU)
 #### Task #1
@@ -36,3 +39,6 @@
 
 #### Task #6
 ###### Foreign language code integration into Java
+
+#### Task #7
+###### String number reveal speedtest comparison (exception check / character by character)
