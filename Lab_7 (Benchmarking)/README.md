@@ -6,6 +6,9 @@
 ### Полученный результат сравнения скорости (5 итераций на разогрев, 5 рабочих итераций)
 ![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_7%20(Benchmarking)/screenshots/result.png?raw=true)
 
+### Вывод
+Использование исключения заметно влияет на скорость работы метода, происходит семикратное замедление. 
+
 # Task #5
 ## String number reveal speedtest comparison (exception check / character by character)
 
@@ -13,3 +16,6 @@
 
 ### Result (5 warmup iterations, 5 working iterations)
 ![](https://github.com/beryanow/java_optimization_labs/blob/master/Lab_7%20(Benchmarking)/screenshots/result.png?raw=true)
+
+### Conclusion
+Exception usage radically influences method processing speed, sevenfold slowdown occurs.
