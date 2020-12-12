@@ -20,6 +20,8 @@
 #### Лабораторная работа №7
 ###### Сравнение скорости методов определения, является ли строка числом (проверка исключение / посимвольно)
 
+#### Финальный проект
+###### RESTful книжная библиотека
 
 # Java Program Optimization Course Labs (NSU)
 #### Task #1
@@ -42,3 +44,6 @@
 
 #### Task #7
 ###### String number reveal speedtest comparison (exception check / character by character)
+
+#### Final project
+###### RESTful book library
