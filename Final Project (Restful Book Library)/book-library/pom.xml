@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>book-library-dto</module>
         <module>book-library-service</module>
         <module>book-library-ui</module>
     </modules>
