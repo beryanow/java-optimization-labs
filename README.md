@@ -20,6 +20,9 @@
 #### Лабораторная работа №7
 ###### Сравнение скорости методов определения, является ли строка числом (проверка исключение / посимвольно)
 
+#### Лабораторная работа №8
+###### Реализация спин блокировки с использованием CAS операции
+
 #### Финальный проект
 ###### RESTful книжная библиотека
 
@@ -44,6 +47,9 @@
 
 #### Task #7
 ###### String number reveal speedtest comparison (exception check / character by character)
+
+#### Task #8
+###### Spin lock implementation using CAS operation
 
 #### Final project
 ###### RESTful book library

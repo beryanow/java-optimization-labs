@@ -29,13 +29,16 @@ public class NumberRevealBenchmark {
     public boolean revealNumberByCharacter() {
         boolean isNumber = true;
         for (int i = 0; i < stringNumber.length(); i++) {
-            char character = stringNumber.charAt(i);
-            if (!('0' <= character && character <= '9')) {
+            if (!Character.isDigit(stringNumber.charAt(i))) {
                 isNumber = false;
                 break;
             }
         }
         return isNumber;
+    }
+
+    public boolean revealNumberByRegularExpression() {
+        return stringNumber.matches("^\\d+$");
     }
 
     @Benchmark
@@ -50,5 +53,12 @@ public class NumberRevealBenchmark {
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public void testPlainConversion(Blackhole blackhole) {
         blackhole.consume(revealNumberByCharacter());
+    }
+
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    public void testConversionThroughRegularExpression(Blackhole blackhole) {
+        blackhole.consume(revealNumberByRegularExpression());
     }
 }
